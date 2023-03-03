@@ -4,6 +4,11 @@ data_url = "https://file.notion.so/f/s/d22c7143-d55e-4f1d-aa98-e9b15e5e5efc/oper
 list_operations_class = import_data(data_url)
 sorted_list_operations_class = sort_operations(list_operations_class)
 
-sorted_list_operations_class[0].print_date_description()
-print(sorted_list_operations_class[0].print_transfer_to()+" -> "+sorted_list_operations_class[0].print_transfer_from())
-
+i=-1
+while i < 5:
+    i += 1
+    print(i+1)
+    sorted_list_operations_class[i].print_date_description()
+    print(sorted_list_operations_class[i].print_transfer_to()+" -> "+sorted_list_operations_class[i].print_transfer_from())
+    print(sorted_list_operations_class[i].print_operationAmount())
+    print()
