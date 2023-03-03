@@ -45,3 +45,11 @@ class Operation():
                 return x[0] + " **" + x[1][16:20]
             if len(x[1]) == 16:
                 return x[0] + " " + x[1][0:4] + " " + x[1][4:6] + "** **** " + x[1][12:16]
+    def print_operationAmount(self):
+        """
+
+        :return:
+        """
+        i = self.operationAmount["amount"]
+        z = self.operationAmount["currency"]["name"]
+        return i+" "+z
