@@ -7,4 +7,3 @@ class Operation():
         self.description = description
         self.transfer_from = transfer_from
         self.transfer_to = transfer_to
-
