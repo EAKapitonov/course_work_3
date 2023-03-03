@@ -4,14 +4,6 @@ data_url = "https://file.notion.so/f/s/d22c7143-d55e-4f1d-aa98-e9b15e5e5efc/oper
 list_operations_class = import_data(data_url)
 sorted_list_operations_class = sort_operations(list_operations_class)
 
-"""Принт Дата и тип перевода"""
-i = sorted_list_operations_class[1].date
-print(i[8]+i[9]+"."+i[5]+i[6]+"."+i[0]+i[1]+i[2]+i[3]+" "+sorted_list_operations_class[1].description)
+sorted_list_operations_class[0].print_date_description()
+print(sorted_list_operations_class[0].print_transfer_to()+" -> "+sorted_list_operations_class[0].print_transfer_from())
 
-"""Принт счета"""
-i = sorted_list_operations_class[1].transfer_from
-x, y = i.split(" ")
-print(x+" **"+y[16:20])
-
-i = sorted_list_operations_class[2].transfer_from
-print(i)
