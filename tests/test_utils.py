@@ -3,8 +3,7 @@ from main import data_url
 
 def test_import_data():
     """
-
-    :return:
+    Проверяет функцию import_data, сравнивая с известными данными
     """
     list_operations_class_test = import_data(data_url)
     assert list_operations_class_test[2].date == "2018-06-30T02:08:58.425572"
@@ -17,8 +16,7 @@ def test_import_data():
 
 def test_sort_operations():
     """
-
-    :return:
+    Проверяет функцию sort_operations, сравнивая с известными данными
     """
     list_operations_class_test = import_data(data_url)
     sorted_list_operations_class_test = sort_operations(list_operations_class_test[1:10])

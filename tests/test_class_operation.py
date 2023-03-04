@@ -4,8 +4,7 @@ from main import data_url
 
 def test_operation():
     """
-
-    :return:
+    проверяет корректность создания объектов класса Operation
     """
     list_operations_class_test = import_data(data_url)
     sorted_list_operations_class_test = sort_operations(list_operations_class_test)
