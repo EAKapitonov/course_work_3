@@ -1,14 +1,22 @@
 from utils_classes.utils import import_data, sort_operations
-from utils_classes.class_operation import Operation
 data_url = "https://file.notion.so/f/s/d22c7143-d55e-4f1d-aa98-e9b15e5e5efc/operations.json?spaceId=0771f0bb-b4cb-4a14-bc05-94cbd33fc70d&table=block&id=f11058ed-10ad-42ea-a13d-aad1945e5421&expirationTimestamp=1677914845650&signature=pZ9lTOxZ6PV_ku_O6n-azlpZf9PwxkKAAxfiEbTt77w&downloadName=operations.json"
 list_operations_class = import_data(data_url)
 sorted_list_operations_class = sort_operations(list_operations_class)
 
-i=-1
+i=0
 while i < 5:
-    i += 1
-    print(i+1)
+    if sorted_list_operations_class[2].state != "EXECUTED":
+        continue
     sorted_list_operations_class[i].print_date_description()
     print(sorted_list_operations_class[i].print_transfer_to()+" -> "+sorted_list_operations_class[i].print_transfer_from())
     print(sorted_list_operations_class[i].print_operationAmount())
     print()
+    i += 1
+
+print(sorted_list_operations_class[2].id)
+print(sorted_list_operations_class[2].state)
+print(sorted_list_operations_class[2].date)
+print(sorted_list_operations_class[2].operationAmount)
+print(sorted_list_operations_class[2].description)
+print(sorted_list_operations_class[2].transfer_from)
+print(sorted_list_operations_class[2].transfer_to)
