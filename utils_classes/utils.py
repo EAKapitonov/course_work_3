@@ -1,15 +1,11 @@
-import requests
 from utils_classes.class_operation import Operation
 
-
-def import_data(data_url):
+def import_data(list_operations_dict):
     """
-    Получает ссылку где хранятся данные, обрабатывает и создает список из объектов класса Operation
-    :param url_data: ссылка на источник данных, где хранятся данные
+    Получает данные об операциях в виде списка словарей, обрабатывает и создает список из объектов класса Operation
+    :param list_operations_dict: список со словарями, где хранится информация об операциях
     :return: список объектов класса Operation
     """
-    file = requests.get(data_url)
-    list_operations_dict = file.json()
     list_operations_class = []
     for i in list_operations_dict:
         if len(i.keys()) != 7:
