@@ -27,7 +27,7 @@ def sort_operations(list_operations_class):
     for i in list_operations_class:
         list_date.append(i.date)
 
-    list_date.sort()
+    list_date.sort(reverse=True)
 
     for i in list_date:
         for x in list_operations_class:
